@@ -1,4 +1,4 @@
-// config.js
+
 require('dotenv').config(); // Loads .env file contents into process.env
 
 module.exports = {

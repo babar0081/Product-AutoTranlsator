@@ -1,8 +1,8 @@
-# system_specs.py
+
 import platform
 import psutil
-import GPUtil # Agar GPUtil install nahi hai toh error dega, hum isko handle karenge
-import torch # PyTorch se CUDA availability check karne ke liye
+import GPUtil 
+import torch 
 
 def get_system_specifications():
     print("--- System Information ---")
@@ -73,7 +73,7 @@ def get_size(bytes, suffix="B"):
         bytes /= factor
 
 if __name__ == "__main__":
-    # Pehle GPUtil install karne ki koshish karein agar maujood nahi
+    
     try:
         import GPUtil
     except ImportError:
@@ -83,7 +83,7 @@ if __name__ == "__main__":
             import sys
             subprocess.check_call([sys.executable, "-m", "pip", "install", "GPUtil"])
             print("GPUtil installed successfully. Please re-run the script.")
-            sys.exit() # Script se exit karein taake user dobara run kar sake
+            sys.exit() 
         except Exception as e:
             print(f"Failed to install GPUtil: {e}")
             print("Please install GPUtil manually: pip install GPUtil")

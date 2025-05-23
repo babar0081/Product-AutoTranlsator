@@ -1,4 +1,4 @@
-# translator.py
+
 
 import sys
 import json
